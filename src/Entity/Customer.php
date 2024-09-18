@@ -84,32 +84,3 @@ class Customer
         $this->status = $status;
     }
 }
-
-
-include 'Address.php';
-
-$jp = new Customer('Joao Pedro', '85 9 1234-1234');
-// $jp->setName('Joao Pedro');
-
-$end = new Address();
-$end->setStreet('Av Santos Dummont');
-
-$jp->setAddress($end);
-
-echo "=============================".PHP_EOL;
-echo "== Nome: {$jp->getName()}".PHP_EOL;
-echo "== Logradouro: {$jp->getAddress()->getStreet()}".PHP_EOL;
-echo "=============================".PHP_EOL;
-
-
-
-// $fulano = new Customer();
-
-// $pedido = new Order();
-// $pedido->setCustomer($fulano);
-
-
-
-
-// <input id="name">
-

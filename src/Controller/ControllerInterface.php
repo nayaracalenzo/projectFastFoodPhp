@@ -10,5 +10,4 @@ interface ControllerInterface
     public function list(): void;
     public function edit(): void;
     public function remove(): void;
-    public function render(): void;
 }

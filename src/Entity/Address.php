@@ -8,15 +8,15 @@ class Address
 {
     private string $street;
     
-    public string $number;
+    private string $number;
 
-    public string $zipcode;
+    private string $zipcode;
 
-    public string $district;
+    private string $district;
 
-    public string $city;
+    private string $city;
 
-    public string $state;
+    private string $state;
 
     public function full(): string
     {
@@ -73,21 +73,3 @@ class Address
         $this->state = $state;
     }
 }
-
-$enderecoAntigo = new Address(); //instancia
-$enderecoAntigo->setStreet('Rua Irlanda');
-$enderecoAntigo->setNumber('51');
-$enderecoAntigo->setDistrict('Gererau');
-$enderecoAntigo->setCity('Itaitinga');
-$enderecoAntigo->setState('CE');
-
-$endereco = new Address(); //instancia
-$endereco->setStreet('Rua Barca Velha');
-$endereco->setNumber('123');
-$endereco->setDistrict('Quintino Cunha');
-$endereco->setCity('Fortaleza');
-$endereco->setState('CE');
-
-echo "Antigo: {$enderecoAntigo->full()}".PHP_EOL;
-echo "Novo: {$endereco->full()}".PHP_EOL;
-

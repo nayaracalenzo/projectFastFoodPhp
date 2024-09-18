@@ -4,24 +4,27 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
-
 class CategoryController extends AbstractController implements ControllerInterface
 {
     public function add(): void
     {
-        echo "pagina de cadastro";
+        $this->render('category/add');
     }
+
     public function list(): void
     {
-        $this->render();
+        $this->render('category/list');
     }
+
     public function edit(): void
     {
-        echo "pagina de editar";
+        $this->render('category/edit');
     }
+
     public function remove(): void
     {
-        echo "excluir";
+        echo "excluir...";
     }
-   
+
+
 }

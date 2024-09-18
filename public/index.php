@@ -1,27 +1,19 @@
 <?php
 
-include '../config/routes.php';
-include '../src/Controller/AbstractController.php';
-include '../src/Controller/ControllerInterface.php';
-include '../src/Controller/CategoryController';
+include '../vendor/autoload.php';
+
+$routes = include '../config/routes.php';
 
 
-use App\Controller\ControllerInterface;
-use App\Controller\AbstractController;
-use App\Controller\CategoryController;
+$url = $_SERVER['REQUEST_URI'];
 
-//$c=new CategoryController();
-//$c->list();
+if (false === isset($routes[$url])) {
+    // Controller / metodo / view
+    echo "<h1>Pagina nao encontrada</h1>";
+    exit;
+}
 
-(new CategoryController())->list();
+$controller = $routes[$url][0];
+$method = $routes[$url][1];
 
-
-
-
-
-
-//include '../views/_layouts/head.php';
-//include '../views/_components/content.php';
-//include '../views/_layouts/footer.php';
-
-
+(new $controller())->$method();

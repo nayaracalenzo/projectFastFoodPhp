@@ -4,7 +4,7 @@ include '../views/_components/menu.php';
 
 ?>
 
-<main class="main-content border-radius-lg ">
+<main class="main-content border-radius-lg">
 
 <?php
 
